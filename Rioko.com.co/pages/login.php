@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="Css/login.css">
+    <link rel="stylesheet" href="../static/css/login.css">
     <title> &reg; Ryoko.com.co</title>
 </head>
 <body>
@@ -59,7 +59,7 @@
           </div>
       </div>
       <div class="center">
-        <a id="login" class="btn waves-effect waves-light white" type="submit" href="index.html" name="action">Suscribirme ahora
+        <a id="login" class="btn waves-effect waves-light white" type="submit" href="index.php" name="action">Suscribirme ahora
           <i class="material-icons right">send</i>
         </a>
         <p>Pulsando el botón aceptas los términos de uso y <strong>política de privacidad.</strong> </p>

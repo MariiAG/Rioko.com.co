@@ -1,18 +1,18 @@
 </body>
 <footer class="page-footer">
-  <div class="">
+  <div class="footer-link">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Listos para recibirte...</h5>
-        <p class="grey-text text-lighten-4">Tenemos todos los protocolos anti COVID-19 exigidos por el gobierno, puedes viajar tranquilo.</p>
-        <p>Si quieres conocer con mas detalles nuestros reglamentos haz <a href="">Click aqui</a></p>
+        <h5 class="footer-title white-text">Listos para recibirte...</h5>
+        <p class="grey-text text-lighten-4">Tenemos todos los protocolos exigidos por el gobierno para la prevension del COVID-19, puedes viajar tranquilo.</p>
+        <p>Si quieres conocer con mas detalles haz <a href="">Click aqui</a></p>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">REDES SOCIALES</h5>
+        <h5 class="footer-title white-text">REDES SOCIALES</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">> Facebook</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">> Instagram</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">> Twitter</a></li>
+          <li><a class="li-menu white-text" href="#">> Facebook</a></li>
+          <li><a class="li-menu white-text" href="#">> Instagram</a></li>
+          <li><a class="li-menu white-text" href="#">> Twitter</a></li>
         </ul>
       </div>
     </div>

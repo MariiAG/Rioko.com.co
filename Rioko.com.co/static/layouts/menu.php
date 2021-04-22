@@ -9,9 +9,9 @@
                     <a href="" class="brand-logo">RyoKo.com.co</a>
                   <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="li-menu" href="sass.html">Protocolos COVID-19</a></li>
-                    <li><a class="li-menu" href="login.html">Unirme a Rioko</a></li>
+                    <li><a class="li-menu" href="login.php">Unirme a Rioko</a></li>
                     <li><a class="li-menu" href="badges.html">Contacto</a></li>
-                    <li><a class="li-menu" href="" onclick="modal();">Ingresar</a></li>
+                    <li><a class="li-menu" onclick="openModal();">Ingresar</a></li>
                   </ul>
                 </div>
             </nav>
