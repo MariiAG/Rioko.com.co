@@ -1,0 +1,41 @@
+.body{
+    background: rgba(0, 0, 0, 0.836);
+    padding: 2em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.div-contact{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.596);
+    padding: 8em;
+}
+
+#favorite{
+    width: 15em;
+    border-radius: 20px;
+}
+
+#title-contact{
+    font-weight: 900;
+}
+
+.icons-contact{
+    width: 70px;
+    height: 70px;
+}
+
+.icons-contact:hover{
+    width: 75px;
+    height: 75px;
+    background: white;
+    border-radius: 40px;
+}
+
+.footer-copyright{
+    background: rgba(0, 0, 0, 0.836);
+    font-family: 'Quicksand', sans-serif;
+    padding: 2em;
+}

@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/login.css">
-    <title> &reg; Ryoko.com.co</title>
-</head>
-<body>
+<?php include_once("../static/layouts/header.php")?>
+<link rel="stylesheet" href="../static/css/login.css">
+<body> 
     <div class="body container white-text">
       <h2 class="center">Únete a nosotros</h2>
       <h6 class="center">Y comienza a recorrer el mundo a tu manera...</h6><br>
@@ -59,17 +46,15 @@
           </div>
       </div>
       <div class="center">
+        <a id="cancel" class="btn waves-effect waves-light red" type="submit" href="index.php" name="action">cancelar
+          <i class="material-icons right">sentiment_dissatisfied</i>
+        </a>
         <a id="login" class="btn waves-effect waves-light white" type="submit" href="index.php" name="action">Suscribirme ahora
-          <i class="material-icons right">send</i>
+          <i class="material-icons right">sentiment_very_satisfied</i>
         </a>
         <p>Pulsando el botón aceptas los términos de uso y <strong>política de privacidad.</strong> </p>
     </div>
     </div>
 </body>
-<div class="footer-copyright">
-  <div class="foot left white-text">
-  © 2021 RyoKo.com.co -  ¡ Viaja, sueña y diviertete !
-  </div>
-  <a class="foot right orange-text" class="grey-text text-lighten-4 right" href=""><i class="tiny material-icons">call</i> - - - Contactate con nosotros </a>
-</div>
+  <?php include_once("../static/layouts/footer-simple.php")?>
 </html>

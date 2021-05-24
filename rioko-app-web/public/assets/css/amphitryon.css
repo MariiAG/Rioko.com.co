@@ -1,0 +1,154 @@
+ul.horizontal li{
+    display:block;
+    float:left;
+    padding:10px;
+}
+
+#personal-information{
+    font-family: 'Quicksand', sans-serif;
+    width: 64em;
+    margin-top: -935px;
+    margin-left: 25em;
+    margin-bottom: 10em;
+}
+
+#title-reviews{
+    background: transparent;
+    padding: -10px;
+    border-radius: 10px;
+}
+
+.reviews{
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.74);
+}
+
+.reviews:hover{
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0) 100%);
+}
+
+#mini-perfil{
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background: black;
+    width: 20em;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.item-menu-amphitryon{
+    background: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    width: 20em;
+    height: 25%;
+    padding: 5em;
+}
+
+input, label{
+    font-weight: 900;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#bg-info{
+    padding: 5em;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.829);
+}
+
+label{
+    width: 50px;
+    margin-top: -20px;
+    border-radius: 20px;
+    color: white;
+    padding: 5px;
+    background-size: 90px;
+}
+
+.item-menu-amphitryon:hover{
+    background: black;
+    border-radius: 10px;
+}
+
+#img-perfil{
+    width: 10em;
+    border-radius: 100px;
+    height: 10em;
+}
+
+.options{
+    height: 100%;
+    margin-top: -15px;
+    padding: 1em;
+    width: 22em;
+    margin-bottom: 2em;
+}
+
+.options-pe{
+    height: 100%;
+    margin-top: -15px;
+    padding: 1em;
+    width: 22em;
+}
+
+.options-ap{
+    height: 100%;
+    margin-top: -15px;
+    padding: 1em;
+    width: 22em;
+}
+
+#btn-delete{
+    width: 6em;
+    border-radius: 30px;
+    background-image: linear-gradient(-225deg, rgb(129, 0, 0) 0%, red 48%, rgb(129, 0, 0) 100%);
+}
+
+#btn-edit{
+    font-weight: 700;
+    width: 11em;
+    background-image: linear-gradient(-225deg, rgb(129, 0, 0) 0%, red 48%, rgb(129, 0, 0) 100%);
+    border-radius: 30px;
+}
+
+#btn-add{
+    margin-left: 7px;
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0) 100%);
+    border-radius: 30px;
+}
+
+#div-state{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0) 100%);
+}
+
+#btn-modify{
+    background-image: linear-gradient(-225deg, rgb(129, 0, 0) 0%, red 48%, rgb(129, 0, 0) 100%);
+    border-radius: 30px;
+}
+
+#btn-save, #btn-logout{
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0) 100%);
+    border-radius: 30px;
+}
+
+.card{
+    background: rgba(0, 0, 0, 0.582);
+}
+
+.card:hover{
+    background: rgba(0, 0, 0, 0.87);
+}
+
+.span-info-cards, h5, #date, #qualification{
+    font-weight: 700;
+}
+
+.footer-copyright{
+    clear: both;
+    position: absolute;
+    width: 100%;
+}

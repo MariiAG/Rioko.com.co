@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../static/css/index.css">
 <?php include_once("../static/layouts/header.php")?>
 <body>
     <div id="body">
@@ -6,13 +7,15 @@
             <nav>
                 <div class="nav-wrapper">
                     <img id="logo" src="../static/img/logo2.gif">
-                    <a href="" class="brand-logo">RyoKo.com.co</a>
+                    <a href="index.php" class="brand-logo">RyoKo.com.co</a>
                   <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a class="li-menu" href="sass.html">Protocolos COVID-19</a></li>
+                    <li><a id="home" class="li-menu" href="index.php">Principal</a></li>
+                    <li><a class="li-menu" href="covid.php">Protocolos COVID-19</a></li>
                     <li><a class="li-menu" href="login.php">Unirme a Rioko</a></li>
-                    <li><a class="li-menu" href="badges.html">Contacto</a></li>
+                    <li><a class="li-menu" href="contact.php">Contacto</a></li>
                     <li><a class="li-menu" onclick="openModal();">Ingresar</a></li>
                   </ul>
                 </div>
             </nav>
         </div>
+        <?php include_once("../static/layouts/session-container.php")?>

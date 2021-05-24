@@ -12,8 +12,16 @@ body{
 #login{
     background: url(fon.jpg);
     background-size: 165%;
+    border-radius: 30px;
+    width: 18em;
     font-family: 'RocknRoll One', sans-serif;
 }
+#cancel{
+    width: 18em;
+    border-radius: 30px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
 h2{
     font-weight: 900;
     font-family: 'Quicksand', sans-serif;
@@ -42,6 +50,7 @@ input{
     font-family: 'Quicksand', sans-serif;
     padding: 2em;
 }
+
 label{
     font-family: 'Quicksand', sans-serif;
 }

@@ -1,0 +1,90 @@
+body{
+    background: url(fon.jpg);
+    background-size: 140%;
+}
+.body{
+    background: rgba(0, 0, 0, 0.836);
+    padding: 2em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+#btn-login{
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0) 100%);
+    border-radius: 30px;
+    width: 18em;
+    font-family: 'RocknRoll One', sans-serif;
+}
+#btn-cancel{
+    width: 18em;
+    background-image: linear-gradient(-225deg, rgb(129, 0, 0) 0%, red 48%, rgb(129, 0, 0) 100%);
+    border-radius: 30px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+h2{
+    font-weight: 900;
+    font-family: 'Quicksand', sans-serif;
+}
+h3{
+    color: darkorange;
+    margin-top: -20px;
+    font-size: 20px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+h6{
+    margin-top: 5px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.title-card-home{
+    background: rgba(0, 0, 0, 0.438);
+}
+
+strong{
+    text-decoration: underline;
+}
+input{
+    background: transparent;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+.footer-copyright{
+    background: rgba(0, 0, 0, 0.836);
+    font-family: 'Quicksand', sans-serif;
+    padding: 2em;
+}
+
+label{
+    font-family: 'Quicksand', sans-serif;
+}
+.rol{
+    color: rgba(0, 0, 0, 0.657);
+    background: rgba(255, 140, 0, 0.253);
+    background-size: 165%;
+    width: 128px;
+    border-radius: 50%;
+}
+
+.rol-selected{
+    color: black;
+    background: white;
+    background-size: 165%;
+    width: 128px;
+    border-radius: 50%;
+}
+#amphitryon, #invited{
+    width: 100px;
+    /* border: 4px solid darkorange; */
+    background: black;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 13   px;
+    color: white;
+    margin-top: -100px;
+}
+h3:hover{
+    color: white;
+}

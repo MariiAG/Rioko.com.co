@@ -1,0 +1,295 @@
+body{
+    background: url(otoño.jpg);
+    background-size: 100%;
+    background-attachment: fixed; 
+}
+
+.material-icons{
+    margin-left: 20px;
+}
+#logo{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+.nav-wrapper{
+    background: url(fon.jpg);
+    background-size: 100%;
+}
+
+nav{
+    height: 5.5em;
+} 
+
+.footer-copyright{
+    background: rgba(0, 0, 0, 0.836);
+    font-family: 'Quicksand', sans-serif;
+    padding: 2em;
+}
+
+.footer-title{
+    font-family: 'RocknRoll One', sans-serif; 
+}
+.brand-logo{
+    font-size: 6px;
+    font-family: 'RocknRoll One', sans-serif;
+    margin-top: 8px;
+}
+
+.footer-copyright{
+    height: 5.5em;
+    padding: 2em;
+}
+#nav-mobile{
+    font-family: 'Quicksand', sans-serif;
+    padding: 0.5em;
+    font-weight: 100;
+}
+
+body{
+    background-size: 110%;
+}
+
+#scenery{
+    border-radius: 40px;
+    padding: 2em 2em;
+    width: 100%;
+    height: 20em;
+}
+.container-scenery{
+    background: rgba(3, 170, 192, 0.199);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.text-scenery-top{
+    position: absolute;
+    top: 35px;
+    left: 10px;
+}
+.text-scenery-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.li-menu:hover{
+    border-radius: none;
+    font-weight: 900;
+    font-size: 18px;
+}
+.li-menu{
+    border-radius: none;
+    text-shadow: 1px 1px black;
+}
+
+#menu-session{
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.315);
+}
+#menu-session:hover{
+    border-radius: 10px;
+    background: black;
+}
+
+.card-content{
+    text-shadow: none;
+}
+
+.card-panel{
+    border-radius: 20px;
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0)100%)
+}
+
+.span-info-cards{
+    font-weight: 900;
+}
+.menu-reserve{
+    text-shadow: 0.5px 0.5px black;
+    font-family: 'Quicksand', sans-serif;
+    width: 90%;
+    margin-left: 5%;
+    padding: 10px 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.menu-reserve-top{
+    margin-left: 5.8%;
+    width: 30%;
+    text-shadow: 1.5px 0 1.5px black;
+    font-family: 'RocknRoll One', sans-serif; 
+}
+
+#location, #arrival, #departure, #guests{
+    text-align: center;
+    color: white;
+    text-shadow: 0.5px 0 0.5px rgba(0, 0, 0, 0.603);
+    width: 20em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.td-in-menu-reserve{
+    padding: 25px;
+}
+
+#lb-location, #lb-arrival, #lb-departure, #lb-guests{
+    text-align: center;
+    margin-top: -30px;
+    font-size: 15px;
+    color: white;
+    font-weight: 900;
+}
+
+.icon-menu-reserve{
+    color: black;
+}
+
+.icon-menu-reserve:hover{
+    color: #424242  ;
+}
+
+.session-container{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.session{
+    border-radius: 20px;
+    border-style: outset; 
+    border-width: 5px;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    color: black;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+    padding: 2em;
+    width: 40%;
+    height: 80%;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+}
+
+#session-login:hover, #session-cancel:hover{
+    background: black;
+}
+.session-label, #session-user, #session-password{
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+#session-cancel{
+    background-size: 5px;
+}
+#session-login, #session-cancel{
+    border-radius: 42px;
+    background: rgba(0, 0, 0, 0.521);
+    font-family: 'RocknRoll One', sans-serif; 
+}
+#session-p{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+#session-p2{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+}
+strong{
+    text-decoration: underline;
+}
+
+#session-title{
+    margin-top: 90px;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    color: white;
+    font-family: 'RocknRoll One', sans-serif; 
+}
+#travel{
+    width: 100%;
+}
+#travel1{
+    width: 100%;
+    height: 4%;
+}
+#search{
+    width: 20%;
+    border-radius: 20px;
+    align-items: center;
+    font-size: 10px;
+    text-shadow: 1px 1px black;
+    font-family: 'RocknRoll One', sans-serif; 
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0)100%);
+}
+
+#btn-reservation{
+    font-weight: 700;
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0)100%);
+    border-radius: 30px;
+}
+
+span{
+    font-weight: 700;
+}
+
+.card{
+    height: 30em;
+    color: white;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.637);
+}
+
+.card:hover{
+    background: rgba(0, 0, 0, 0.918);
+}
+
+#search:hover{
+    margin-top: 5px;
+    width: 28%;
+    text-shadow: 2px 0 2px black;
+}
+
+#menu ul li {
+    border-radius: 40px;
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0;
+}
+
+#menu ul ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    padding:0;
+}
+
+#menu ul ul li {
+    float:none;
+    width:150px
+}
+
+#menu ul ul a {
+    line-height:120%;
+    padding:10px 15px;
+}
+
+#menu ul li:hover > ul {
+    display:block;
+}

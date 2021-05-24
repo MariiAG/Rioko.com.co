@@ -1,0 +1,100 @@
+
+ul.horizontal li{
+    display:block;
+    float:left;
+    padding:10px;
+}
+
+#personal-information{
+    font-family: 'Quicksand', sans-serif;
+    width: 64em;
+    margin-top: -780px;
+    margin-left: 25em;
+    margin-bottom: 3em;
+}
+
+#mini-perfil{
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background: black;
+    width: 20em;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+#img-perfil{
+    width: 10em;
+    border-radius: 100px;
+    height: 10em;
+}
+
+.item-menu-invited{
+    background: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    width: 20em;
+    height: 25%;
+    padding: 5em;
+}
+
+input, label{
+    font-weight: 900;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#bg-info{
+    height: 50em;
+    padding: 5em;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.829);
+}
+
+label{
+    width: 50px;
+    margin-top: -30px;
+    border-radius: 20px;
+    color: white;
+    padding: 5px;
+    background-size: 90px;
+}
+
+.item-menu-invited:hover{
+    background: black;
+    border-radius: 10px;
+}
+
+#div-option{
+    height: 100%;
+    margin-top: -15px;
+    padding: 1em;
+    width: 22em;
+}
+
+#div-option-reserve{
+    height: 80em;
+    margin-top: -15px;
+    padding: 1em;
+    width: 22em;
+    background: rgba(0, 0, 0, 0.836);
+}
+
+.close-session{
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.315);
+}
+.close-session:hover{
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.609);
+}
+
+#btn-modify{
+    background-image: linear-gradient(-225deg, rgb(1, 59, 1) 0%, green 48%, rgb(1, 59, 1) 100%);
+    border-radius: 30px;
+}
+
+#btn-save, #btn-logout{
+    background-image: linear-gradient(-225deg, rgb(2, 2, 175) 0%, blue 48%, rgb(2, 2, 175) 100%);
+    border-radius: 30px;
+}
