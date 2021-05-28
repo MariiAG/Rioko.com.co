@@ -47,4 +47,9 @@ class LoginController extends BaseController
 		$loginModel->addUser($type, $name, $lastname, $email, $country, $password);
 		return redirect()->to('/public/home');
 	}
+
+	public function error(){
+		echo view('layouts/header');
+		echo view('errorLogInUser_view');
+	}
 }

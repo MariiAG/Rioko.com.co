@@ -1,3 +1,9 @@
+body{
+    background: url(otoño.jpg);
+    background-size: 100%;
+    background-attachment: fixed; 
+}
+
 ul.horizontal li{
     display:block;
     float:left;
@@ -107,8 +113,7 @@ label{
 }
 
 #btn-edit{
-    font-weight: 700;
-    width: 11em;
+    width: 6em;
     background-image: linear-gradient(-225deg, rgb(129, 0, 0) 0%, red 48%, rgb(129, 0, 0) 100%);
     border-radius: 30px;
 }
@@ -119,10 +124,22 @@ label{
     border-radius: 30px;
 }
 
+.card-panel{
+    background-color: black;
+}
+
 #div-state{
+    height: 15em;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0) 100%);
+}
+
+#picture{
+    border-radius: 5px;
+}
+
+h6{
+    font-weight: 700;
 }
 
 #btn-modify{
@@ -136,6 +153,7 @@ label{
 }
 
 .card{
+    height: 33em;
     background: rgba(0, 0, 0, 0.582);
 }
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\InvitedModel;
 
 class InvitedController extends BaseController
 {
@@ -15,16 +16,12 @@ class InvitedController extends BaseController
 		// $lastname = $session->get('lastname');
 
 		session_start();
-		if(!isset($_SESSION['type'])){
-			$type="";
-			$name = "";
-			$lastname ="";
-		}
-		else {
-			$type = $_SESSION['type'];
-			$name = $_SESSION['name'];
-			$lastname = $_SESSION['lastname'];
-		}
+		$country = $_SESSION['country'] ;
+		$email = $_SESSION['email'];
+		$id_user = $_SESSION['id'];
+		$type = $_SESSION['type'];
+		$name = $_SESSION['name'];
+		$lastname = $_SESSION['lastname'];
 		
 		$dataUser = array(
 			"country" => $country,
@@ -34,9 +31,46 @@ class InvitedController extends BaseController
 			"name" => $name,
 			"lastname" => $lastname,
 		);
+
+		$invitedModel = new InvitedModel();
+		$resultApartments = $invitedModel->readApartments($id_user);
+
+		$dataQuery = array(
+			"apartments" => $resultApartments,
+		);
 		
-		echo view('layouts/header');
-		echo view('layouts/menu', $dataUser);
+		echo view('layouts/header', $dataUser);
+		echo view('layouts/menu', $dataQuery);
 		echo view('invited_view');
+	}
+
+	public function changeDataPersonal(){
+		$request = \Config\Services::request();
+		$invitedModel = new InvitedModel();
+		$id_user = $request->getGet('id');
+		$name = $request->getPost('name');
+		$lastname = $request->getPost('lastname');
+		$email = $request->getPost('email');
+		$country = $request->getPost('country');
+		$password = $request->getPost('password');
+		$passwordTwo = $request->getPost('passwordConfirm');
+		if ($password === $passwordTwo) {
+			$invitedModel->changeDataPersonal($id_user, $name, $lastname, $email, $country, $password);
+			session_start();
+			session_destroy();
+			sleep(1);
+			return redirect()->to('/public/home');
+		}else{
+			return redirect()->to('/public/amphitryon/error');
+		}
+	}
+
+	public function deleteBooking(){
+		$request = \Config\Services::request();
+		$invitedModel = new invitedModel();
+		$id = $request->getGet('id');
+		$invitedModel->deleteBookings($id);
+		sleep(1);
+		return redirect()->to('/public/invited');
 	}
 }

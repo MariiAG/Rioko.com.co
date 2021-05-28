@@ -11,42 +11,60 @@
 
       <div class="row">
           <div class="input-field col s6">
+            <i class="material-icons prefix">room</i>
             <input id="city" type="text" class="validate" name="city">
             <label for="city">Ciudad</label>
           </div>
           <div class="input-field col s6">
+            <i class="material-icons prefix">public</i>
             <input id="country" type="text" class="validate" name="country">
             <label for="country">Pais</label>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s6">
-          <input id="address" type="text" class="validate" name="address">
+            <i class="material-icons prefix">location_city</i>
+            <input id="address" type="text" class="validate" name="address">
             <label for="address">Direccion</label>
           </div>
           <div class="file-field input-field col s6">
+            <i class="material-icons prefix">publish</i>
             <input id="google-maps" type="text" class="validate" name="googleMaps">
             <label for="google-maps">Link Google Maps</label>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s6">
-          <input id="picture" type="text" class="validate" name="picture">
+            <i class="material-icons prefix">photo_size_select_actual</i>
+            <input id="picture" type="text" class="validate" name="picture">
             <label for="picture">Imagen Destacada</label>
           </div>
           <div class="file-field input-field col s6">
+            <i class="material-icons prefix">photo_album</i>
             <input id="collage" type="text" class="validate" name="collage">
             <label for="collage">Imagenes Adicionales</label>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s6">
-          <input id="price" type="text" class="validate" name="price">
+            <i class="material-icons prefix">attach_money</i>
+            <input id="price" type="text" class="validate" name="price">
             <label for="price">Precio por noche</label>
           </div>
           <div class="file-field input-field col s6">
+            <i class="material-icons prefix">rate_review</i>
             <input id="review-apartment" type="text" class="validate" name="reviewApartment">
             <label for="review-apartment">Reseña del apartamento</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">airline_seat_individual_suite</i>
+            <input id="bedrooms" type="text" class="validate" name="bedrooms">
+            <label for="bedrooms">Habitaciones</label>
+          </div>
+          <div class="file-field input-field col s6">
+
           </div>
       </div>
       <div class="center">

@@ -1,0 +1,37 @@
+body{
+    background: url(fon.jpg);
+    background-size: 140%;
+}
+.body{
+    margin-top: 10em;
+    background: rgba(0, 0, 0, 0.836);
+    padding: 5em;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+#btn-cancel{
+    width: 18em;
+    background-image: linear-gradient(-225deg, rgb(129, 0, 0) 0%, red 48%, rgb(129, 0, 0) 100%);
+    border-radius: 30px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+h2{
+    font-weight: 900;
+    font-family: 'Quicksand', sans-serif;
+}
+h3{
+    color: white;
+    font-size: 20px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+h6{
+    margin-top: -20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+strong{
+    text-decoration: underline;
+}
+

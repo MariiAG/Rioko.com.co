@@ -1,3 +1,8 @@
+body{
+    background: url(otoño.jpg);
+    background-size: 100%;
+    background-attachment: fixed; 
+}
 
 ul.horizontal li{
     display:block;
@@ -89,12 +94,28 @@ label{
     background: rgba(255, 0, 0, 0.609);
 }
 
+.card{
+    background: rgba(0, 0, 0, 0.582);
+}
+
+.card-panel{
+    background-color: black;
+}
+
+#btn-cancel{
+    font-size: 9px;
+    width: 23em;
+    background-image: linear-gradient(-225deg, rgb(129, 0, 0) 0%, red 48%, rgb(129, 0, 0) 100%);
+    border-radius: 30px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
 #btn-modify{
-    background-image: linear-gradient(-225deg, rgb(1, 59, 1) 0%, green 48%, rgb(1, 59, 1) 100%);
+    background-image: linear-gradient(-225deg, rgb(129, 0, 0) 0%, red 48%, rgb(129, 0, 0) 100%);
     border-radius: 30px;
 }
 
 #btn-save, #btn-logout{
-    background-image: linear-gradient(-225deg, rgb(2, 2, 175) 0%, blue 48%, rgb(2, 2, 175) 100%);
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0) 100%);
     border-radius: 30px;
 }

@@ -50,17 +50,6 @@ function validateUpdateUser(){
                 rgba(0, 0, 0, 0.596)
                 `,
             }); 
-        } else {
-            Swal.fire({
-                position: 'center',
-                icon: 'warning',
-                title: 'Oh, no...',
-                text: 'Las contraseñas no coinciden',
-                iconColor: 'Red',
-                backdrop: `
-                rgba(0, 0, 0, 0.596)
-                `
-              });
         }
     }
 }

@@ -18,6 +18,34 @@ function amphitryon(){
   location.href ="amphitryon";
 }
 
+function returnLogin(){
+  Swal.fire({
+    title: 'Redirigiendo a...',
+    text: 'Pagina principal',
+    icon: 'success',
+    showConfirmButton: false,
+    timer: 3000,
+    backdrop: `
+    rgba(0, 0, 0, 0.596)
+    `,
+  }); 
+  setTimeout(function(){location.href ="home";}, 1400);
+}
+
+function returnDataUser(){
+  Swal.fire({
+    title: 'Redirigiendo a...',
+    text: 'Perfil de Usuario',
+    icon: 'success',
+    showConfirmButton: false,
+    timer: 3000,
+    backdrop: `
+    rgba(0, 0, 0, 0.596)
+    `,
+  }); 
+  setTimeout(function(){window.history.back();}, 1400);
+}
+
 // function startOptionSessionUser(){
 //     let user = document.getElementById('session-user').value;
 //     let password = document.getElementById('session-password').value;

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?php echo base_url();?>/public/assets/css/covid.css">
-<br>
+<br><br><br><br>
 <div class="div-contact container white-text">
     <h4 id="title-contact">Accede a nuestras redes sociales o contactanos por whatsapp</h4>
     <p>Estaremos siempre cerca de ti para apoyarte...</p>
@@ -10,4 +10,3 @@
     <p>Soñemos juntos &reg; Rioko.com.co</p>
     <a id="favorite" class="waves-effect waves-light btn orange darken-4"><i class="material-icons left">favorite_border</i>Recomendar</a>
 </div>
-<br>

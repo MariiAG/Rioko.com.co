@@ -12,6 +12,16 @@ class AmphitryonModel extends Model
         $apartments = $this->db->query($query);
         return $apartments->getResult();
     }
+
+    function changeDataPersonal($id_user, $name, $lastname, $email, $country, $password){
+        if ($password != "" || $password != null) {
+            $query = "UPDATE users SET name = '{$name}', lastname = '{$lastname}', email = '{$email}', country = '{$country}', password = '{$password}' WHERE id_user = '{$id_user}'";            
+            $this->db->query($query);
+        }else{
+            $query = "UPDATE users SET name = '{$name}', lastname = '{$lastname}', email = '{$email}', country = '{$country}' WHERE id_user = '{$id_user}'";               $this->db->query($query);
+        }
+    }
+
     function readReviewsAmphitryon($id){
         $query = "SELECT * FROM reviews where id_amphitryon='{$id}'";
         $reviews = $this->db->query($query);
@@ -29,8 +39,8 @@ class AmphitryonModel extends Model
     }
 
 // createApartment
-    function addApartment($id_user, $city, $country, $address, $googleMaps, $picture, $collage, $price, $reviewApartment, $state){
-        $query = "INSERT INTO apartments (id_amphitryon, city, country, address, googleMaps, picture, collage, price, review_apartment, state) VALUES ('{$id_user}', '{$city}', '{$country}', '{$address}', '{$googleMaps}', '{$picture}', '{$collage}', '{$price}', '{$reviewApartment}', '{$state}')";
+    function addApartment($id_user, $city, $country, $address, $googleMaps, $picture, $collage, $bedrooms, $price, $reviewApartment, $state){
+        $query = "INSERT INTO apartments (id_amphitryon, city, country, address, googleMaps, picture, collage, bedrooms, price, review_apartment, state) VALUES ('{$id_user}', '{$city}', '{$country}', '{$address}', '{$googleMaps}', '{$picture}', '{$collage}', '{$bedrooms}', '{$price}', '{$reviewApartment}', '{$state}')";
         $this->db->query($query);
     }
 
@@ -41,8 +51,8 @@ class AmphitryonModel extends Model
         return $apartment->getResult();
     }
 
-    function changeApartment($id_apartment, $city, $country, $address, $googleMaps, $picture, $collage, $price, $reviewApartment){
-        $query = "UPDATE apartments SET city = '{$city}', country = '{$country}', address = '{$address}', googleMaps = '{$googleMaps}', picture = '{$picture}', collage = '{$collage}', price = '{$price}', review_apartment = '{$reviewApartment}' WHERE id_apartment = '{$id_apartment}'";
+    function changeApartment($id_apartment, $city, $country, $address, $googleMaps, $picture, $collage, $bedrooms, $price, $reviewApartment){
+        $query = "UPDATE apartments SET city = '{$city}', country = '{$country}', address = '{$address}', googleMaps = '{$googleMaps}', picture = '{$picture}', collage = '{$collage}', bedrooms = '{$bedrooms}', price = '{$price}', review_apartment = '{$reviewApartment}' WHERE id_apartment = '{$id_apartment}'";
         $this->db->query($query);
     }
 

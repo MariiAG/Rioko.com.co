@@ -39,29 +39,33 @@
 
                             // print_r($apartments);
 
-                            echo "<div class='col s4'>
+                            echo "<div class='col s6'>
                                     <div class='card'>
                                         <div class='card-image'>
-                                            <div id='div-state' class='card-panel'>ESTADO / {$apartmentUser->state}</div>
+                                            <div id='div-state' class='card-panel center'>                      
+                                                <img id='picture' src='{$apartmentUser->picture}'>
+                                                <h6>ESTADO / {$apartmentUser->state}</h6>
+                                            </div>
                                         </div>
                                         <div class='card-content'>
                                             <ul>
-                                            <li><span class='span-info-cards'>CIUDAD: </span>{$apartmentUser->city}</li>
-                                            <li><span class='span-info-cards'>PAÍS: </span>{$apartmentUser->country}</li>
-                                            <li><span class='span-info-cards'>DIRECCIÓN: </span><a class='blue-text' href='{$apartmentUser->googleMaps}'>{$apartmentUser->address}</a></li>                          
-                                            <li><span class='span-info-cards'>RESEÑA: </span>{$apartmentUser->review_apartment}</li>
+                                            <br
+                                                <li><span class='span-info-cards'>CIUDAD: </span>{$apartmentUser->city}</li>
+                                                <li><span class='span-info-cards'>PAÍS: </span>{$apartmentUser->country}</li>
+                                                <li><span class='span-info-cards'>DIRECCIÓN: </span><a class='orange-text' href='{$apartmentUser->googleMaps}' target='_blank'>{$apartmentUser->address}</a></li>                          
+                                                <li><span class='span-info-cards'>HABITACIONES: </span>{$apartmentUser->bedrooms}</li>
+                                                <li><span class='span-info-cards'>PRECIO: </span>{$apartmentUser->price}</li>
+                                                <li><span class='span-info-cards'>RESEÑA: </span>{$apartmentUser->review_apartment}</li>
+                                                <div class=' white-text center'>                                     
+                                                    <a id='btn-edit' class='btn waves-effect waves-light blue center' href='{$routeUpdate}'>
+                                                    <i class='material-icons left'>border_color</i>
+                                                    </a>
+                                                    <a id='btn-delete' class='btn waves-effect waves-light red center' href='{$routeDelete}'>
+                                                    <i class='material-icons left'>delete</i>
+                                                    </a>                                       
+                                                </div>
                                             </ul>
                                         </div>
-                                        <div class='card-content white-text'>
-                                        <div class='center'>
-                                            <a id='btn-edit' class='btn waves-effect waves-light blue center' href='{$routeUpdate}'>Cambiar
-                                            <i class='material-icons left'>border_color</i>
-                                            </a>
-                                            <a id='btn-delete' class='btn waves-effect waves-light red center' href='{$routeDelete}'>
-                                            <i class='material-icons left'>delete</i>
-                                            </a>
-                                        </div>
-                                    </div>
                                     </div>
                                   </div>";
                         }
@@ -71,42 +75,44 @@
 
         <div id="div-personal-data" style="display: none">
             <div id="bg-info">
+            <form method="POST" action="<?php echo base_url();?>/public/amphitryon/data-personal?id=<?php echo $id_user;?>">
                 <div class="center">
-                    <a id="btn-save" class="btn waves-effect waves-light green left" type="submit" name="action" onclick="validateUpdateUser();">Guardar Los Cambios<i class="material-icons right">offline_pin</i></a>
-                    <a id="btn-modify" class="btn waves-effect waves-light blue right" type="submit" name="action" onclick="ValidateModifyUser();">Modificar Mis Datos
+                    <button id="btn-save" class="btn waves-effect waves-light green left" type="submit" onclick="validateUpdateUser();">Guardar Los Cambios<i class="material-icons right">offline_pin</i></button>
+                    <a id="btn-modify" class="btn waves-effect waves-light blue right" onclick="ValidateModifyUser();">Modificar Mis Datos
                     <i class="material-icons right">border_color</i>
                     </a>
                 </div><br><br><br><br><br><br>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input readonly id="first_name" type="text" class="validate" value="<?php echo $name;?>">
+                        <input readonly id="first_name" type="text" class="validate" name="name" value="<?php echo $name;?>">
                         <label for="first_name">Nombre</label>
                     </div>
                     <div class="input-field col s6">
-                        <input readonly id="last_name" type="text" class="validate" value="<?php echo $lastname;?>">
+                        <input readonly id="last_name" type="text" class="validate" name="lastname" value="<?php echo $lastname;?>">
                         <label for="last_name">Apellido</label>
                     </div>
                 </div><br><br><br>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input readonly id="email" type="email" class="validate" value="<?php echo $email;?>">
+                        <input readonly id="email" type="email" class="validate" name="email" value="<?php echo $email;?>">
                         <label for="email">E-mail</label>
                     </div>
                     <div class="input-field col s6">
-                        <input readonly id="country" type="text" class="validate" value="<?php echo $country;?>">
+                        <input readonly id="country" type="text" class="validate" name="country" value="<?php echo $country;?>">
                         <label for="country">Pais</label>
                     </div>
                 </div><br><br><br>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input placeholder="********" readonly id="password" type="password" class="validate">
+                        <input placeholder="********" readonly id="password" type="password" name="password" class="validate">
                         <label for="password">Contraseña</label>
                     </div>
                     <div class="input-field col s6">
-                        <input placeholder="********" readonly id="passwordConfirm" type="password" class="validate">
+                        <input placeholder="********" readonly id="passwordConfirm" type="password" name="passwordConfirm" class="validate">
                         <label for="passwordConfirm">Confirmar Contraseña</label>
                     </div>
                 </div>
+            </form>
             </div>
         </div>
 

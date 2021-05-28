@@ -6,7 +6,14 @@
     border-radius: 30px;
 }
 
+body{
+    background: url(otoño.jpg);
+    background-size: 100%;
+    background-attachment: fixed; 
+}
+
 .div-contact{
+    border-radius: 20px;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     background: rgba(0, 0, 0, 0.596);

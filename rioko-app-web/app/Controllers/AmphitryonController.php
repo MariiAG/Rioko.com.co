@@ -38,6 +38,7 @@ class AmphitryonController extends BaseController
 		$id_invited = $resultReviews[0]->id_user;
 		$resultInvited = $amphitryonModel->readInvited($id_invited);
 		$resultQuantityReviews = $amphitryonModel->quantityReviews($id_user);
+		
 		$dataQuery = array(
 			"apartments" => $resultApartments,
 			"reviews" => $resultReviews,
@@ -55,6 +56,11 @@ class AmphitryonController extends BaseController
 		}else {
 			echo "No tiene permisos para acceder";
 		}
+	}
+
+	public function error(){
+		echo view('layouts/header');
+		echo view('errorUpdateUser_view');
 	}
 
 // Crear
@@ -94,9 +100,10 @@ class AmphitryonController extends BaseController
 		$googleMaps = $request->getPost('googleMaps');
 		$picture = $request->getPost('picture');
 		$collage = $request->getPost('collage');
+		$bedrooms = $request->getPost('bedrooms');
 		$price = $request->getPost('price');
 		$reviewApartment = $request->getPost('reviewApartment');
-		$amphitryonModel->addApartment($id_user, $city, $country, $address, $googleMaps, $picture, $collage, $price, $reviewApartment, $state);
+		$amphitryonModel->addApartment($id_user, $city, $country, $address, $googleMaps, $picture, $collage,$bedrooms, $price, $reviewApartment, $state);
 		return redirect()->to('/public/amphitryon');
 	}
 
@@ -125,9 +132,10 @@ class AmphitryonController extends BaseController
 		$googleMaps = $request->getPost('googleMaps');
 		$picture = $request->getPost('picture');
 		$collage = $request->getPost('collage');
+		$bedrooms = $request->getPost('bedrooms');
 		$price = $request->getPost('price');
 		$reviewApartment = $request->getPost('reviewApartment');
-		$amphitryonModel->changeApartment($id_apartment, $city, $country, $address, $googleMaps, $picture, $collage, $price, $reviewApartment);
+		$amphitryonModel->changeApartment($id_apartment, $city, $country, $address, $googleMaps, $picture,$bedrooms, $collage, $price, $reviewApartment);
 		return redirect()->to('/public/amphitryon');
 	}
 
@@ -145,5 +153,29 @@ class AmphitryonController extends BaseController
 		$id = $request->getGet('id');
 		$amphitryonModel->deleteApartment($id);
 		return redirect()->to('/public/amphitryon');
+	}
+
+
+// actualizar datos
+
+	public function changeDataPersonal(){
+		$request = \Config\Services::request();
+		$amphitryonModel = new AmphitryonModel();
+		$id_user = $request->getGet('id');
+		$name = $request->getPost('name');
+		$lastname = $request->getPost('lastname');
+		$email = $request->getPost('email');
+		$country = $request->getPost('country');
+		$password = $request->getPost('password');
+		$passwordTwo = $request->getPost('passwordConfirm');
+		if ($password != $passwordTwo) {
+			return redirect()->to('/public/amphitryon/error');
+		}else{
+			$amphitryonModel->changeDataPersonal($id_user, $name, $lastname, $email, $country, $password);
+			session_start();
+			session_destroy();
+			sleep(1);
+			return redirect()->to('/public/home');
+		}
 	}
 }

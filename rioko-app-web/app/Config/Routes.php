@@ -35,9 +35,12 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->post('/sign-in', 'Home::signIn');
 $routes->get('/sign-out', 'Home::signOut');
+$routes->post('/search', 'Home::search');
+// $routes->get('/searchGet', 'Home::searchGet');
 
 $routes->get('/login', 'LoginController::login');
 $routes->post('/add-user', 'LoginController::addUser');
+$routes->get('/error', 'LoginController::error');
 
 $routes->get('/contact', 'ContactController::contact');
 $routes->get('/covid', 'CovidController::covid');
@@ -49,8 +52,12 @@ $routes->get('/amphitryon/update-Apartment', 'AmphitryonController::updateApartm
 $routes->post('/amphitryon/change-Apartment', 'AmphitryonController::changeApartment');
 $routes->get('/amphitryon/delete-Apartment', 'AmphitryonController::deleteApartment');
 $routes->get('/amphitryon/close', 'AmphitryonController::close');
+$routes->post('/amphitryon/data-personal', 'AmphitryonController::changeDataPersonal');
+$routes->get('/amphitryon/error', 'AmphitryonController::error');
 
 $routes->get('/invited', 'InvitedController::invited');
+$routes->post('/invited/data-personal', 'InvitedController::changeDataPersonal');
+$routes->get('/invited/delete-booking', 'InvitedController::deleteBooking');
 
 /*
  * --------------------------------------------------------------------

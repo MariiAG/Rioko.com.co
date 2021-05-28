@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?php echo base_url();?>/public/assets/css/covid.css">
-<br>
+<br><br><br><br>
 <div class="div-contact container white-text">
     <h4 id="title-contact">Enterate de los protocolos Covid19 que exigimos para este 2021</h4>
     <p>Con el compromiso de nuestros anfitriones y de nuestros visitantes, haremos que todo sea posible.</p>
@@ -10,4 +10,3 @@
     <p>Soñemos juntos &reg; Rioko.com.co</p>
     <a id="favorite" class="waves-effect waves-light btn orange darken-4"><i class="material-icons left">info</i>Descargar PDF</a>
 </div>
-<br>
