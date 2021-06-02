@@ -1,8 +1,13 @@
-<link rel="stylesheet" href="<?php echo base_url();?>/public/assets/css/error.css">
+<link rel="stylesheet" href="<?php echo base_url();?>/public/assets/css/available.css">
 <script src="<?php echo base_url();?>/public/assets/js/LoginSession.js"></script>
 
 <body>
     <div class="body container white-text">
+      <div class="left">
+        <a id="btn-cancel" class="btn waves-effect waves-light red" onclick="returnLogin();">Regresar al menu principal
+          <i class="material-icons left">arrow_back</i>
+        </a>
+      </div><br><br><br>
     <div class='row'>
       <?php 
         if ($av == "" || $av == null) {
@@ -10,7 +15,8 @@
         }else{
           foreach($av as $apartment)
           {
-            echo "<div class='col m4 s12'>
+            $routeBooking = base_url()."/public/invited/booking?idApartment={$apartment->id_apartment}&idAmphitryon={$apartment->id_amphitryon}&arrival={$arrival}&departure={$departure}";
+            echo "<div class='col m5 s12'>
                     <div class='card'>
                       <div class='card-image'>
                         <img id='picture' src='{$apartment->picture}'>
@@ -27,7 +33,7 @@
                       </div>
                       <div class='card-action'>
                         <div class='card-content white-text center'>
-                          <a id='btn-reservation' class='btn waves-effect waves-light blue center'>Reservar x {$apartment->price}
+                          <a id='btn-reservation' class='btn waves-effect waves-light blue center' href='{$routeBooking}' onclick='booking();'>Reservar x {$apartment->price}
                           <i class='material-icons left'>room_service</i>
                           </a>
                         </div>
@@ -37,12 +43,6 @@
               }
             }
           ?>
-      </div>
-
-      <div class="center">
-        <a id="btn-cancel" class="btn waves-effect waves-light red" onclick="returnLogin();">De acuerdo
-          <i class="material-icons right">sentiment_dissatisfied</i>
-        </a>
-      </div>
+      </div><br><br><br>
     </div>
 </body>

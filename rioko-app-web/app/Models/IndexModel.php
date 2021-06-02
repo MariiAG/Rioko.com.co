@@ -19,24 +19,30 @@ class IndexModel extends Model
     }
 
     function readApartmentSearch($location, $arrival, $departure){
-        $query = "SELECT id_apartment FROM apartments WHERE (city = '{$location}' or country= '{$location}') and state = 'disponible'";
+        $query = "SELECT id_apartment FROM apartments WHERE (city = '{$location}' or country = '{$location}') and state = 'disponible'";
         $id_ap = $this->db->query($query);
         $idApartment = $id_ap->getResult();
-        // Segundo query
-        $queryTwo = "SELECT apartments.*
-        FROM apartments
-        INNER JOIN bookings
-        ON apartments.id_apartment = bookings.id_apartment
-        WHERE NOT bookings.arrival='{$arrival}' AND NOT bookings.departure='{$departure}' AND bookings.id_apartment = '{$idApartment[0]->id_apartment}'";
-        $apartment = $this->db->query($queryTwo);
-        return $apartment->getResult();
+        
+        if ($idApartment == null || $idApartment == "") {
+            return $id_ap->getResult();
+        }else{
+            $queryTwo ="SELECT id_booking FROM bookings WHERE id_apartment = '{$idApartment[0]->id_apartment}'";
+            $id_booking = $this->db->query($queryTwo);
+            $idBooking = $id_booking->getResult();
+            
+            if ($idBooking == null || $idBooking == "") {
+                $queryThree = "SELECT distinct * FROM apartments WHERE id_apartment='{$idApartment[0]->id_apartment}'";
+                $apartments = $this->db->query($queryThree);
+                return $apartments->getResult();
+            }else{
+                $queryFour = "SELECT distinct apartments.*
+                FROM apartments
+                INNER JOIN bookings
+                ON apartments.id_apartment = bookings.id_apartment
+                WHERE NOT bookings.arrival='{$arrival}' AND NOT bookings.departure='{$departure}' AND bookings.id_apartment = '{$idApartment[0]->id_apartment}'";
+                $apartment = $this->db->query($queryFour);
+                return $apartment->getResult();
+            }
+        }
     }
 }
-
-
-// $query = "SELECT apartments.*
-        // FROM apartments
-        // INNER JOIN bookings
-        // ON apartments.id_apartment=bookings.id_apartment 
-        // WHERE not bookings.arrival='{$arrival}' and not bookings.departure='{$departure}' and (apartments.city = '{$location}' or apartments.country = '{$location}') 
-        // and not bookings.stateBooking = 'reservado' and (apartments.state = 'disponible')";

@@ -1,0 +1,42 @@
+body{
+    background: url(fon.jpg);
+    background-size: 140%;
+}
+.body{
+    margin-top: 3em;
+    background: rgba(0, 0, 0, 0.836);
+    padding: 5em;
+    margin-bottom: 3em;
+    border-radius: 30px;
+}
+
+#btn-cancel{
+    width: 18em;
+    background-image: linear-gradient(-225deg, rgb(138, 90, 1) 0%, orange 48%, rgb(138, 90, 1)100%);
+    border-radius: 30px;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+h1{
+    margin-top: -15px;
+    font-weight: 900;
+    font-family: 'RocknRoll One', sans-serif;
+}
+h4, h5, h6{
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+a{
+    font-weight: 900;
+    color: orange;
+}
+
+a:hover{
+    font-size: 30px;
+}
+
+strong{
+    text-decoration: underline;
+}
+

@@ -16,7 +16,7 @@
                 </li>
             </ul><br>
             <div class="center">
-                <a id="btn-logout" class="btn waves-effect waves-light" type="submit" href="<?php echo base_url();?>/public/amphitryon/close">
+                <a id="btn-logout" class="btn waves-effect waves-light" type="submit" href="<?php echo base_url();?>/public/amphitryon/close" onclick="closeSession();">
                     <i class="tiny material-icons right">highlight_off</i>Cerrar Sesión
                 </a>
             </div>
@@ -44,7 +44,6 @@
                                         <div class='card-image'>
                                             <div id='div-state' class='card-panel center'>                      
                                                 <img id='picture' src='{$apartmentUser->picture}'>
-                                                <h6>ESTADO / {$apartmentUser->state}</h6>
                                             </div>
                                         </div>
                                         <div class='card-content'>
@@ -77,7 +76,7 @@
             <div id="bg-info">
             <form method="POST" action="<?php echo base_url();?>/public/amphitryon/data-personal?id=<?php echo $id_user;?>">
                 <div class="center">
-                    <button id="btn-save" class="btn waves-effect waves-light green left" type="submit" onclick="validateUpdateUser();">Guardar Los Cambios<i class="material-icons right">offline_pin</i></button>
+                    <button id="btn-save" class="btn waves-effect waves-light green left" disabled type="submit" onclick="validateUpdateUser();">Guardar Los Cambios<i class="material-icons right">offline_pin</i></button>
                     <a id="btn-modify" class="btn waves-effect waves-light blue right" onclick="ValidateModifyUser();">Modificar Mis Datos
                     <i class="material-icons right">border_color</i>
                     </a>

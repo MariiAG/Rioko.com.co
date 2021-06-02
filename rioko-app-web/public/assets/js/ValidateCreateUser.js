@@ -11,7 +11,9 @@ function rolSelected(rol){
             rgba(0, 0, 0, 0.596)
             `
         });
-        document.getElementById('typeInvited').value="invitado";
+        alert(rol);
+        l = document.getElementById('typeInvited').value="invitado";
+        alert(l);
     }else{
         document.getElementById('rol-invited').className = "rol col center";
     }
@@ -27,7 +29,7 @@ function rolSelected(rol){
             rgba(0, 0, 0, 0.596)
             `
         });
-        document.getElementById('typeAmphitryon').value="Anfitrion";
+        document.getElementById('typeAmphitryon').value="anfitrion";
     }else{
         document.getElementById('rol-amphitryon').className = "rol col center right";
     }
@@ -45,11 +47,10 @@ function validateCreateUser(){
     
     if (name == "" || lastname == "" || email == "" || country == "" || password == "" || passwordConfirm == "") {
         Swal.fire({
-            position: 'center',
             icon: 'error',
             title: 'Oops...',
-            text: 'Asegurese de llenar todos los campos del formulario',
-            iconColor: 'Red',
+            showConfirmButton: false,
+            timer: 3000,
             backdrop: `
             rgba(0, 0, 0, 0.596)
             `
@@ -60,7 +61,8 @@ function validateCreateUser(){
                 position: 'center',
                 icon: 'error',
                 text: 'No ha seleccionado ningun rol de usuario',
-                iconColor: 'Red',
+                showConfirmButton: false,
+                timer: 3000,
                 backdrop: `
                 rgba(0, 0, 0, 0.596)
                 `
@@ -72,7 +74,8 @@ function validateCreateUser(){
                     icon: 'warning',
                     title: 'Oh, no...',
                     text: 'Las contraseña no puede estar vacia',
-                    iconColor: 'Red',
+                    showConfirmButton: false,
+                    timer: 3000,
                     backdrop: `
                     rgba(0, 0, 0, 0.596)
                     `
@@ -81,11 +84,10 @@ function validateCreateUser(){
                 if (password === passwordConfirm) {
                     Swal.fire({
                         position: 'center',
-                        title: 'Contraseña Actualizada',
+                        title: 'Creando Usuario...',
                         icon: 'success',
-                        showCancelButton: false,
-                        confirmButtonColor: 'green',
-                        confirmButtonText: `Genial`,
+                        showConfirmButton: false,
+                        timer: 3000,
                         backdrop: `
                         rgba(0, 0, 0, 0.596)
                         `

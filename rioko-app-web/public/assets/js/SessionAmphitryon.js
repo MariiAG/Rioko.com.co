@@ -72,4 +72,18 @@ function ValidateModifyUser(){
     document.getElementById('country').removeAttribute("readonly");
     document.getElementById('password').removeAttribute("readonly");
     document.getElementById('passwordConfirm').removeAttribute("readonly");
+    document.getElementById('btn-save').disabled=false;
+}
+
+
+function closeSession(){
+    Swal.fire({
+        title: 'Cerrando sesión...',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 3000,
+        backdrop: `
+        rgba(0, 0, 0, 0.596)
+        `
+    })
 }

@@ -8,12 +8,12 @@ function reserve(){
     document.getElementById('section').className = "options-ap";
 }
 
-function CloseSession(){
+function closeSession(){
     Swal.fire({
         title: 'Cerrando sesión...',
         icon: 'success',
         showConfirmButton: false,
-        timer: 1700,
+        timer: 3000,
         backdrop: `
         rgba(0, 0, 0, 0.596)
         `
@@ -61,4 +61,17 @@ function ValidateModifyUser(){
     document.getElementById('country').removeAttribute("readonly");
     document.getElementById('password').removeAttribute("readonly");
     document.getElementById('passwordConfirm').removeAttribute("readonly");
+    document.getElementById('btn-save').disabled=false;
+}
+
+function cancelBooking(){
+    Swal.fire({
+      title: '¡Cancelando reserva!',
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 3000,
+      backdrop: `
+      rgba(0, 0, 0, 0.596)
+      `,
+    }); 
 }

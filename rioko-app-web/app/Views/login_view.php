@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="<?php echo base_url();?>/public/assets/css/login.css">
 <script src="<?php echo base_url();?>/public/assets/js/ValidateCreateUser.js"></script>
 
@@ -12,12 +11,12 @@
         <div id="rol-invited" class="rol col center" onclick="rolSelected('invited')">
           <i id="invited-icon" class="large material-icons">person_outline</i><br>
           <a id="invited">Invitado</a>
-          <input id="typeInvited" type="hidden" name="type">
+          <input id="typeInvited" type="hidden" name="typeI">
         </div>
         <div id="rol-amphitryon" class="rol col center right" onclick="rolSelected('amphitryon')">
           <i id="amphitryon-icon" class="large material-icons">person</i><br>
             <a id="amphitryon">Anfitrión</a>
-            <input id="typeAmphitryon" type="hidden" name="type">
+            <input id="typeAmphitryon" type="hidden" name="typeA">
         </div>
       </div>
       <div class="row">
@@ -51,16 +50,15 @@
           </div>
       </div><br>
       <div class="center">
-        <a id="btn-cancel" class="btn waves-effect waves-light red" type="submit" name="action" onclick="cancelCreateUser();">cancelar
+        <a id="btn-cancel" class="btn waves-effect waves-light red" onclick="cancelCreateUser();">cancelar
           <i class="material-icons right">sentiment_dissatisfied</i>
         </a>
-        <a id="btn-login" class="btn waves-effect waves-light white" type="submit" name="action" onclick="validateCreateUser();">Suscribirme ahora
+        <button id="btn-login" class="btn waves-effect waves-light white" type="submit" onclick="validateCreateUser();">Suscribirme ahora
           <i class="material-icons right">sentiment_very_satisfied</i>
-        </a>
-        <button class="btn waves-effect waves-light" type="submit" onclick="validateCreateUser();">post</button>
+        </button>
+        <!-- <button class="btn waves-effect waves-light" type="submit" onclick="validateCreateUser();">post</button> -->
         <p>Pulsando el botón aceptas los términos de uso y <strong>política de privacidad.</strong></p>
       </div>
     </div>
   </form>
 </body>
-

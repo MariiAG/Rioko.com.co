@@ -3,7 +3,7 @@
 <script src="<?php echo base_url();?>/public/assets/js/FunctionsApartmentAmphitryion.js"></script>
 
 <body>
-  <form method="POST" action="<?php echo base_url();?>/public/amphitryon/change-Apartment?id=<?php echo $upApartment->id_apartment;?>">
+  <form method="POST" action="<?php echo base_url();?>/public/amphitryon/change-Apartment?id=<?php echo $upApartment->id_apartment;?>" enctype="multipart/form-data">
     <div class="body container white-text">
       <h2 class="center">Actualizar Apartamento</h2>
       <!-- <input id="id_user" type="hidden" name="id_user" value=""> -->
@@ -34,14 +34,26 @@
       </div>
       <div class="row">
           <div class="input-field col s6">
-            <i class="material-icons prefix">photo_size_select_actual</i>
-            <input id="picture" type="text" class="validate" name="picture" value="<?php echo $upApartment->picture;?>">
-            <label for="picture">Imagen Destacada</label>
+            <div class="file-field input-field">
+                  <div class="btn btn-img">
+                    <span><i class="material-icons">photo_size_select_actual</i></span>
+                    <input type="file" name="picture" value="<?php echo $upApartment->picture;?>">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" placeholder="Imagen Destacada" type="text" value="<?php echo $upApartment->picture;?>">
+                  </div>
+            </div>
           </div>
           <div class="file-field input-field col s6">
-            <i class="material-icons prefix">photo_album</i>
-            <input id="collage" type="text" class="validate" name="collage" value="<?php echo $upApartment->collage;?>">
-            <label for="collage">Imagenes Adicionales</label>
+            <div class="file-field input-field">
+                  <div class="btn btn-img">
+                    <span><i class="material-icons">photo_album</i></span>
+                    <input type="file" name="collage" value="<?php echo $upApartment->collage;?>">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" placeholder="Imagen Adicional" type="text" value="<?php echo $upApartment->collage;?>">
+                  </div>
+            </div>
           </div>
       </div>
       <div class="row">
@@ -67,13 +79,13 @@
           </div>
       </div>
       <div class="center">
-        <a id="btn-cancel" class="btn waves-effect waves-light red" type="submit" name="action" onclick="cancelCreateApartment();">cancelar
+        <a id="btn-cancel" class="btn waves-effect waves-light red" onclick="cancelCreateApartment();">cancelar
           <i class="material-icons right">sentiment_dissatisfied</i>
         </a>
-        <a id="btn-login" class="btn waves-effect waves-light white">Guardar
+        <button id="btn-login" class="btn waves-effect waves-light white" type="submit">Guardar
           <i class="material-icons right">sentiment_very_satisfied</i>
-        </a>
-        <button class="btn waves-effect waves-light" type="submit">post</button>
+        </button>
+        <!-- <button class="btn waves-effect waves-light" type="submit">post</button> -->
       </div><br>
     </div>
   </form>

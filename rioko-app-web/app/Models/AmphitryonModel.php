@@ -39,8 +39,8 @@ class AmphitryonModel extends Model
     }
 
 // createApartment
-    function addApartment($id_user, $city, $country, $address, $googleMaps, $picture, $collage, $bedrooms, $price, $reviewApartment, $state){
-        $query = "INSERT INTO apartments (id_amphitryon, city, country, address, googleMaps, picture, collage, bedrooms, price, review_apartment, state) VALUES ('{$id_user}', '{$city}', '{$country}', '{$address}', '{$googleMaps}', '{$picture}', '{$collage}', '{$bedrooms}', '{$price}', '{$reviewApartment}', '{$state}')";
+    function addApartment($id_user, $city, $country, $address, $googleMaps, $pathMain, $pathOther, $bedrooms, $price, $reviewApartment, $state){
+        $query = "INSERT INTO apartments (id_amphitryon, city, country, address, googleMaps, picture, collage, bedrooms, price, review_apartment, state) VALUES ('{$id_user}', '{$city}', '{$country}', '{$address}', '{$googleMaps}', '{$pathMain}', '{$pathOther}', '{$bedrooms}', '{$price}', '{$reviewApartment}', '{$state}')";
         $this->db->query($query);
     }
 
@@ -52,8 +52,13 @@ class AmphitryonModel extends Model
     }
 
     function changeApartment($id_apartment, $city, $country, $address, $googleMaps, $picture, $collage, $bedrooms, $price, $reviewApartment){
-        $query = "UPDATE apartments SET city = '{$city}', country = '{$country}', address = '{$address}', googleMaps = '{$googleMaps}', picture = '{$picture}', collage = '{$collage}', bedrooms = '{$bedrooms}', price = '{$price}', review_apartment = '{$reviewApartment}' WHERE id_apartment = '{$id_apartment}'";
-        $this->db->query($query);
+        if ($picture == "" || $collage == "") {
+            $query = "UPDATE apartments SET city = '{$city}', country = '{$country}', address = '{$address}', googleMaps = '{$googleMaps}', bedrooms = '{$bedrooms}', price = '{$price}', review_apartment = '{$reviewApartment}' WHERE id_apartment = '{$id_apartment}'";
+            $this->db->query($query);
+        }else {
+            $query = "UPDATE apartments SET city = '{$city}', country = '{$country}', address = '{$address}', googleMaps = '{$googleMaps}', picture = '{$picture}', collage = '{$collage}', bedrooms = '{$bedrooms}', price = '{$price}', review_apartment = '{$reviewApartment}' WHERE id_apartment = '{$id_apartment}'";
+            $this->db->query($query);
+        }
     }
 
 // deleteApartment

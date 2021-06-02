@@ -146,9 +146,9 @@ span{
     text-shadow: 2px 0 2px black;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
     body{
-        background: url(templo2.jpg);
+        background: url(playa_movil.jpg);
         background-size: 100%;
         background-attachment: fixed; 
     }
@@ -161,6 +161,16 @@ span{
 
     .center{
         font-size: 8px;
+    }
+
+    .footer-copyright{
+        text-align: center;
+        width: 100%;
+        height: 10em;
+    }
+
+    .foot{
+        margin-top: 15px;
     }
 
     .container-search h6, .container-search h4, .container-search h5, #title-search{

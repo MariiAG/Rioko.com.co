@@ -32,6 +32,32 @@ function returnLogin(){
   setTimeout(function(){location.href ="home";}, 1400);
 }
 
+function returnHome(){
+  Swal.fire({
+    title: '¡De acuerdo!',
+    text: 'Redirigiendo a pagina principal...',
+    icon: 'success',
+    showConfirmButton: false,
+    timer: 3000,
+    backdrop: `
+    rgba(0, 0, 0, 0.596)
+    `,
+  }); 
+  setTimeout(function(){location.href ="../home";}, 1500);
+}
+
+function booking(){
+  Swal.fire({
+    title: '¡Reservando!',
+    icon: 'success',
+    showConfirmButton: false,
+    timer: 3000,
+    backdrop: `
+    rgba(0, 0, 0, 0.596)
+    `,
+  }); 
+}
+
 function returnDataUser(){
   Swal.fire({
     title: 'Redirigiendo a...',

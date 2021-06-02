@@ -3,11 +3,11 @@
 <script src="<?php echo base_url();?>/public/assets/js/FunctionsApartmentAmphitryion.js"></script>
 
 <body>
-  <form method="POST" action="<?php echo base_url();?>/public/amphitryon/add-Apartment">
+  <form method="POST" action="<?php echo base_url();?>/public/amphitryon/add-Apartment" enctype="multipart/form-data">
     <div class="body container white-text">
       <h2 class="center">Agregar Nuevo Apartamento</h2>
       <h6 class="center">Aqui comienza la magia...</h6><br>
-      <input id="id_user" type="hidden" name="id_user" value="20">
+      <!-- <input id="id_user" type="hidden" name="id_user" value="20"> -->
 
       <div class="row">
           <div class="input-field col s6">
@@ -35,14 +35,26 @@
       </div>
       <div class="row">
           <div class="input-field col s6">
-            <i class="material-icons prefix">photo_size_select_actual</i>
-            <input id="picture" type="text" class="validate" name="picture">
-            <label for="picture">Imagen Destacada</label>
+            <div class="file-field input-field">
+                  <div class="btn btn-img">
+                    <span><i class="material-icons">photo_size_select_actual</i></span>
+                    <input type="file" name="picture">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" placeholder="Imagen Destacada" type="text">
+                  </div>
+            </div>
           </div>
           <div class="file-field input-field col s6">
-            <i class="material-icons prefix">photo_album</i>
-            <input id="collage" type="text" class="validate" name="collage">
-            <label for="collage">Imagenes Adicionales</label>
+            <div class="file-field input-field">
+                  <div class="btn btn-img">
+                    <span><i class="material-icons">photo_album</i></span>
+                    <input type="file" name="collage">
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" placeholder="Imagen Adicional" type="text">
+                  </div>
+            </div>
           </div>
       </div>
       <div class="row">
@@ -68,13 +80,13 @@
           </div>
       </div>
       <div class="center">
-        <a id="btn-cancel" class="btn waves-effect waves-light red" type="submit" name="action" onclick="cancelCreateApartment();">cancelar
+        <a id="btn-cancel" class="btn waves-effect waves-light red" onclick="cancelCreateApartment();">cancelar
           <i class="material-icons right">sentiment_dissatisfied</i>
         </a>
-        <a id="btn-login" class="btn waves-effect waves-light white" type="submit" name="action" onclick="validateCreateApartment();">Guardar
+        <button id="btn-login" class="btn waves-effect waves-light white" type="submit" onclick="validateCreateApartment();">Guardar
           <i class="material-icons right">sentiment_very_satisfied</i>
-        </a>
-        <button class="btn waves-effect waves-light" type="submit" onclick="validateCreateApartment();">post</button>
+        </button>
+        <!-- <button class="btn waves-effect waves-light" type="submit" onclick="validateCreateApartment();">post</button> -->
         <p>Pulsando el botón aceptas los términos de uso y <strong>política de privacidad.</strong></p>
       </div>
     </div>

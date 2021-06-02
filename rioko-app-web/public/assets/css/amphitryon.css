@@ -26,7 +26,6 @@ ul.horizontal li{
 
 .reviews{
     border-radius: 20px;
-    background: rgba(0, 0, 0, 0.74);
 }
 
 .reviews:hover{
@@ -125,7 +124,8 @@ label{
 }
 
 .card-panel{
-    background-color: black;
+    text-shadow: 1px 0 1px black;
+    background-color: rgba(0, 0, 0, 0.171);
 }
 
 #div-state{
@@ -169,4 +169,10 @@ h6{
     clear: both;
     position: absolute;
     width: 100%;
+}
+
+h4{
+    color: white;
+    font-weight: 900;
+    text-shadow: 2px 0 2px black;
 }

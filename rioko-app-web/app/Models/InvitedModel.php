@@ -33,4 +33,9 @@ class InvitedModel extends Model
         $query = "DELETE FROM bookings WHERE id_booking='{$id}'";
         $this->db->query($query);
     }
+
+    function addBooking($id_user, $id_apartment, $id_amphitryon, $arrival, $departure, $state){
+        $query = "INSERT INTO bookings (id_user, id_apartment, id_amphitryon, arrival, departure, stateBooking) VALUES ('{$id_user}', '{$id_apartment}', '{$id_amphitryon}', '{$arrival}', '{$departure}', '{$state}')";
+        $this->db->query($query);
+    }
 }

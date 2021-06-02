@@ -12,7 +12,7 @@
                 <li><i class="tiny material-icons">location_on</i> Pais: <?php echo $country;?></li><br>
             </ul>
             <div class="center">
-                <a id="btn-logout" class="btn waves-effect waves-light" type="submit" href="<?php echo base_url();?>/public/amphitryon/close">
+                <a id="btn-logout" class="btn waves-effect waves-light" type="submit" href="<?php echo base_url();?>/public/amphitryon/close" onclick="closeSession();">
                     <i class="tiny material-icons right">highlight_off</i>Cerrar Sesión
                 </a>
             </div>
@@ -27,7 +27,7 @@
             <div id="bg-info">
             <form method="POST" action="<?php echo base_url();?>/public/invited/data-personal?id=<?php echo $id_user;?>">
                 <div class="center">
-                    <button id="btn-save" class="btn waves-effect waves-light green left" type="submit" onclick="validateUpdateUser();">Guardar Los Cambios<i class="material-icons right">offline_pin</i></button>
+                    <button id="btn-save" disabled class="btn waves-effect waves-light green left" type="submit" onclick="validateUpdateUser();">Guardar Los Cambios<i class="material-icons right">offline_pin</i></button>
                     <a id="btn-modify" class="btn waves-effect waves-light blue right" onclick="ValidateModifyUser();">Modificar Mis Datos
                     <i class="material-icons right">border_color</i>
                     </a>
@@ -77,7 +77,6 @@
                                         <div class='card-image'>
                                             <div id='div-state' class='card-panel center'>                      
                                                 <img id='picture' src='{$apartmentUser->picture}'>
-                                                <h6>{$apartmentUser->state}</h6>
                                             </div>
                                         </div>
                                         <div class='card-content'>
@@ -90,7 +89,7 @@
                                                 <li><span class='span-info-cards'>PRECIO: </span>{$apartmentUser->price}</li>
                                                 <li><span class='span-info-cards'>RESEÑA: </span>{$apartmentUser->review_apartment}</li>
                                                 <div class='card-content white-text center'>
-                                                    <a id='btn-cancel' class='btn waves-effect waves-light blue center' href='{$routeDelete}'>Cancelar reserva
+                                                    <a id='btn-cancel' class='btn waves-effect waves-light blue center' href='{$routeDelete}' onclick='cancelBooking();'>Cancelar reserva
                                                     <i class='tiny material-icons left'>room_service</i>
                                                     </a>
                                                 </div>

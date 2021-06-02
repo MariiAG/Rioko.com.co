@@ -88,3 +88,7 @@ label{
 h3:hover{
     color: white;
 }
+
+.btn-img{
+    background-image: linear-gradient(-225deg, rgb(158, 103, 0) 0%, orange 48%, rgb(158, 103, 0) 100%);
+}

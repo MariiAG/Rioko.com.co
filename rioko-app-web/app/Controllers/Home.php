@@ -9,12 +9,8 @@ class Home extends BaseController
 	{
 		$indexModel = new IndexModel();
 		$resultApartments= $indexModel->readApartments();
-		// $available = $this->search();
-
-		//   var_dump($available);
 
 		$dataApartments = array(
-			// "av" => $available,
 			"ap" => $resultApartments,
 		);
 
@@ -97,25 +93,16 @@ class Home extends BaseController
 		$result = $indexModel->readApartmentSearch($location, $arrival, $departure);
 		if ($result != null || $result != "") {
 			$data = array(
+				"location" => $location,
+				"arrival" => $arrival, 
+				"departure" => $departure,
 				"av" => $result,
 			);
 			echo view('layouts/header');
 			echo view('available_view', $data);
 		}else{
+			echo view('layouts/header');
 			echo view('errorLogInUser_view', $data);
 		}
 	}
-
-	// public function searchGet(){
-	// 	$indexModel = new IndexModel();
-	// 	$request = \Config\Services::request();
-	// 	$location = $request->getGet('location');
-	// 	$available = $indexModel->readApartmentSearch($location);
-	// 	$data = array(
-	// 		"data" => $available,
-	// 	);
-
-	// 	echo view('layouts/header');
-	// 	echo view('layouts/menu', $available);
-	// }
 }

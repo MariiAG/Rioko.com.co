@@ -36,7 +36,6 @@ $routes->get('/', 'Home::index');
 $routes->post('/sign-in', 'Home::signIn');
 $routes->get('/sign-out', 'Home::signOut');
 $routes->post('/search', 'Home::search');
-// $routes->get('/searchGet', 'Home::searchGet');
 
 $routes->get('/login', 'LoginController::login');
 $routes->post('/add-user', 'LoginController::addUser');
@@ -58,6 +57,7 @@ $routes->get('/amphitryon/error', 'AmphitryonController::error');
 $routes->get('/invited', 'InvitedController::invited');
 $routes->post('/invited/data-personal', 'InvitedController::changeDataPersonal');
 $routes->get('/invited/delete-booking', 'InvitedController::deleteBooking');
+$routes->get('/invited/booking', 'InvitedController::booking');
 
 /*
  * --------------------------------------------------------------------

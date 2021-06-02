@@ -2,73 +2,6 @@
 <link rel="stylesheet" href="<?php echo base_url();?>/public/assets/css/index.css">
 <script src="<?php echo base_url();?>/public/assets/js/ValidateSearchDestination.js"></script>
 <br><br>
-<!-- <div>
-  <table class="menu-reserve-top striped">
-    <tr>
-        <td class="center orange darken-4">
-          <i class="small icon-menu-reserve material-icons">hotel</i>
-        </td>
-        <td class="center">
-          <i class="small icon-menu-reserve material-icons">location_on</i>
-        </td>
-        <td class="center">
-          <i class="small icon-menu-reserve material-icons">location_off</i>
-        </td>
-        <td class="center">
-          
-        </td>
-    </tr>
-    <tr class="orange darken-2">
-        <td class="center orange darken-4">
-          <span id="lb-location" >D E S T I N O</span>
-        </td>
-        <td class="center">
-          <span id="lb-arrival" >L L E G A D A</span>
-        </td>
-        <td class="center">
-          <span id="lb-departure" >S A L I D A</span>
-        </td>
-        <td class="center">
-          <span id="lb-guests" >V I A J E  R O S</span>
-        </td>
-    </tr>
-<form action="POST" action="/public/search">
-    <tr class="orange darken-3">
-        <td class="td-in-menu-reserve orange darken-4">
-          <input id="location" type="text" name="location">
-        </td>
-        <td class="td-in-menu-reserve">
-          <input id="arrival" type="date" name="arrival">
-        </td>
-        <td class="td-in-menu-reserve">
-          <input id="departure" type="date" name="departure">
-        </td>
-        <td class="td-in-menu-reserve">
-        <input id="guests" type="number" name="guests">
-        </td>
-    </tr>
-  </table>
-  <br>
-  <div class="center">
-    <a id="search" class="waves-effect waves-orange btn-small orange darken-4" type="submit" onclick="validateSearchDestination();">
-    <i class="tiny material-icons right">search</i>C o n s u l t a r
-    </a>
-  </div>
-</form>
-  <br>
-</div> -->
-
-<!-- <form action="POST" action="<?php echo base_url();?>/public/search">
-  <div class="input-field col s6">
-    <i class="material-icons prefix">room</i>
-    <input id="location" type="text" class="validate" name="location">
-    <label for="location">Ciudad</label>
-  </div>
-  <div class="center">
-  <button class="btn waves-effect waves-light" type="submit">post</button>  
-  </div>
-</form> -->
-
 <div class="row container">
     <div class="search-container input-field col s6">
         <form method="POST" action="<?php echo base_url();?>/public/search">
@@ -130,13 +63,6 @@
                           <li><span class='span-info-cards'>HABITACIONES: </span>{$apartment->bedrooms}</li>
                           <li><span class='span-info-cards'>PRECIO X NOCHE:</span> $ {$apartment->price}</li>
                         </ul>
-                      </div>
-                      <div class='card-action'>
-                        <div class='card-content white-text center'>
-                          <a id='btn-reservation' class='btn waves-effect waves-light blue center'>Reservar x {$apartment->price}
-                          <i class='material-icons left'>room_service</i>
-                          </a>
-                        </div>
                       </div>
                     </div>
                   </div>";

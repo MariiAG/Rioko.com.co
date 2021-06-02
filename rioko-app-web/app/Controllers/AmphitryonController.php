@@ -90,21 +90,47 @@ class AmphitryonController extends BaseController
 
 	public function addApartment()
 	{
+		session_start();
+		$id_user = $_SESSION['id'];
+
 		$request = \Config\Services::request();
 		$amphitryonModel = new AmphitryonModel();
 		$state = "disponible";
-		$id_user = $request->getPost('id_user');
 		$city = $request->getPost('city');
 		$country = $request->getPost('country');
 		$address = $request->getPost('address');
 		$googleMaps = $request->getPost('googleMaps');
-		$picture = $request->getPost('picture');
-		$collage = $request->getPost('collage');
 		$bedrooms = $request->getPost('bedrooms');
 		$price = $request->getPost('price');
+
+
+		$picture = $request->getFile('picture');
+		$imageName = $picture->getRandomName();
+		$pathMain = "";
+		if ($picture->isValid() && ! $picture->hasMoved())
+		{
+			$picture->move('./uploads/img/', $imageName);
+			$pathMain = base_url()."/public/uploads/img/".$imageName;
+		}
+		$collage = $request->getFile('collage');
+		$imageNameOther = $collage->getRandomName();
+		$pathOther = "";
+		if ($collage->isValid() && ! $collage->hasMoved())
+		{
+			$collage->move('./uploads/img/', $imageName);
+			$pathOther = base_url()."/public/uploads/img/".$imageNameOther;
+		}
+
 		$reviewApartment = $request->getPost('reviewApartment');
-		$amphitryonModel->addApartment($id_user, $city, $country, $address, $googleMaps, $picture, $collage,$bedrooms, $price, $reviewApartment, $state);
-		return redirect()->to('/public/amphitryon');
+		if ($id_user == "" && $city == "" && $country == "" && $address == "" && $googleMaps == "" && $bedrooms == "" && $price == "") {
+			sleep(1.5);
+			echo view('layouts/header');
+			echo view('errorCreateUser_view');
+		}else {
+			sleep(1.5);
+			$amphitryonModel->addApartment($id_user, $city, $country, $address, $googleMaps, $pathMain, $pathOther, $bedrooms, $price, $reviewApartment, $state);
+			return redirect()->to('/public/amphitryon');
+		}
 	}
 
 // actualizar 
@@ -130,12 +156,28 @@ class AmphitryonController extends BaseController
 		$country = $request->getPost('country');
 		$address = $request->getPost('address');
 		$googleMaps = $request->getPost('googleMaps');
-		$picture = $request->getPost('picture');
-		$collage = $request->getPost('collage');
 		$bedrooms = $request->getPost('bedrooms');
 		$price = $request->getPost('price');
 		$reviewApartment = $request->getPost('reviewApartment');
-		$amphitryonModel->changeApartment($id_apartment, $city, $country, $address, $googleMaps, $picture,$bedrooms, $collage, $price, $reviewApartment);
+
+		$picture = $request->getFile('picture');
+		$imageName = $picture->getRandomName();
+		$pathMain = "";
+		if ($picture->isValid() && ! $picture->hasMoved())
+		{
+			$picture->move('./uploads/img/', $imageName);
+			$pathMain = base_url()."/public/uploads/img/".$imageName;
+		}
+		$collage = $request->getFile('collage');
+		$imageNameOther = $collage->getRandomName();
+		$pathOther = "";
+		if ($collage->isValid() && ! $collage->hasMoved())
+		{
+			$collage->move('./uploads/img/', $imageName);
+			$pathOther = base_url()."/public/uploads/img/".$imageNameOther;
+		}
+
+		$amphitryonModel->changeApartment($id_apartment, $city, $country, $address, $googleMaps, $pathMain, $pathOther, $price, $bedrooms, $reviewApartment);
 		return redirect()->to('/public/amphitryon');
 	}
 

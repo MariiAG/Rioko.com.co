@@ -73,4 +73,36 @@ class InvitedController extends BaseController
 		sleep(1);
 		return redirect()->to('/public/invited');
 	}
+
+	public function booking(){
+		session_start();
+		if(!isset($_SESSION['type'])){
+			$type="";
+			$name = "";
+			$lastname ="";
+			$id_user = "";
+		}
+		else {
+			$type = $_SESSION['type'];
+			$name = $_SESSION['name'];
+			$lastname = $_SESSION['lastname'];
+			$id_user = $_SESSION['id'];
+		}
+
+		$request = \Config\Services::request();
+		$invitedModel = new invitedModel();
+		$id_apartment = $request->getGet('idApartment');
+		$id_amphitryon = $request->getGet('idAmphitryon');
+		$arrival = $request->getGet('arrival');
+		$departure = $request->getGet('departure');
+		$state = "reservado";
+		if ($type == "invitado") {
+			$invitedModel->addBooking($id_user, $id_apartment, $id_amphitryon, $arrival, $departure, $state);
+			sleep(1);
+			return redirect()->to('/public/invited');
+		}else {
+			echo view('layouts/header');
+			echo view('errorBookingUser_view');
+		}
+	}
 }
